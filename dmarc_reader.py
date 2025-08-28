@@ -56,6 +56,12 @@ class MainTab(QWidget):
         self.resultArea.setWidgetResizable(True)
         self.resultArea.setWidget(self.resultWidget)
 
+        # Ensure dark background throughout the tab
+        self.setStyleSheet("background-color: #000000;")
+        self.resultWidget.setStyleSheet("background-color: #000000;")
+        self.resultArea.setStyleSheet("background: #000000;")
+        self.resultArea.viewport().setStyleSheet("background-color: #000000;")
+
         layout = QVBoxLayout(self)
         layout.addWidget(self.loadButton)
         layout.addWidget(self.resultArea)
